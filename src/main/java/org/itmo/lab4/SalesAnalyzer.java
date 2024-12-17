@@ -15,12 +15,12 @@ public class SalesAnalyzer {
         String inputDir = args[0];
         String outputDir = args[1];
         int reducerCount = Integer.parseInt(args[2]);
-        int datablockSizeKb = Integer.parseInt(args[3]) * ((int) Math.pow(2, 10)); // * 1 kb
+        int datablockSizeBytes = Integer.parseInt(args[3]) * 1024; // * 1 kb
         String intermediateResultDir = outputDir + "-intermediate";
 
         long startTime = System.currentTimeMillis();
         Configuration configuration = new Configuration();
-        configuration.set("mapreduce.input.fileinputformat.split.maxsize", Integer.toString(datablockSizeKb));
+        configuration.set("mapreduce.input.fileinputformat.split.maxsize", Integer.toString(datablockSizeBytes));
 
         String[] analysisArgs = new String[]{inputDir, intermediateResultDir, String.valueOf(reducerCount)};
 
