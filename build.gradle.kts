@@ -3,7 +3,7 @@ plugins {
 }
 
 group = "org.itmo"
-version = "0.0.1-SNAPSHOT"
+version = "0.0.1"
 
 java {
     toolchain {
@@ -19,6 +19,12 @@ repositories {
 dependencies {
     implementation("org.apache.hadoop:hadoop-common:3.2.1")
     implementation("org.apache.hadoop:hadoop-client:3.2.1")
+
+    compileOnly("org.projectlombok:lombok:1.18.36")
+    annotationProcessor("org.projectlombok:lombok:1.18.36")
+
+    testCompileOnly("org.projectlombok:lombok:1.18.36")
+    testAnnotationProcessor("org.projectlombok:lombok:1.18.36")
 }
 
 tasks.withType<Test> {
