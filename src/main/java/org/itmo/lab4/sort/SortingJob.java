@@ -25,6 +25,8 @@ public class SortingJob extends Configured implements Tool {
 
         sortingJob.setJarByClass(SortingJob.class);
 
+        sortingJob.setSortComparatorClass(SortingComparator.class);
+
         sortingJob.setMapperClass(SortingMapper.class);
         sortingJob.setReducerClass(SortingReducer.class);
 

@@ -12,7 +12,7 @@ public class SortingReducer extends Reducer<DoubleWritable, CompositeData, Text,
         for (CompositeData value : values) {
             Text category = new Text(value.getCategory());
 
-            context.write(category, new Text(String.format("%.2f\t%d", -1 * key.get(), value.getQuantity())));
+            context.write(category, new Text(String.format("%.2f\t%d", key.get(), value.getQuantity())));
         }
     }
 }
