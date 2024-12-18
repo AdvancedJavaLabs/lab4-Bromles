@@ -33,7 +33,7 @@ public class SortingJob extends Configured implements Tool {
         sortingJob.setMapOutputKeyClass(DoubleWritable.class);
         sortingJob.setMapOutputValueClass(CompositeData.class);
 
-        sortingJob.setOutputKeyClass(CompositeData.class);
+        sortingJob.setOutputKeyClass(Text.class);
         sortingJob.setOutputValueClass(Text.class);
 
         FileInputFormat.addInputPath(sortingJob, new Path(inputDir));
