@@ -18,9 +18,10 @@ public class SalesAnalyzer {
         int datablockSizeBytes = Integer.parseInt(args[3]) * 1024; // * 1 kb
         String intermediateResultDir = outputDir + "-intermediate";
 
-        long startTime = System.currentTimeMillis();
         Configuration configuration = new Configuration();
         configuration.set("mapreduce.input.fileinputformat.split.maxsize", Integer.toString(datablockSizeBytes));
+
+        long startTime = System.currentTimeMillis();
 
         String[] analysisArgs = new String[]{inputDir, intermediateResultDir, String.valueOf(reducerCount)};
 
