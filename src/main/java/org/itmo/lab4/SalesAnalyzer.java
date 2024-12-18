@@ -8,7 +8,7 @@ import org.itmo.lab4.sort.SortingJob;
 public class SalesAnalyzer {
     public static void main(String[] args) throws Exception {
         if (args.length != 4) {
-            System.err.println("Usage: hadoop jar /tmp/lab4-parcalc-bromles-0.0.1.jar org.itmo.lab4.SalesAnalyzer <input path> <output path> <REDUCER_COUNT=1> <DATABLOCK_SIZE_KB=1>");
+            System.err.println("Usage: hadoop jar /tmp/lab4-parcalc-bromles-0.0.1.jar org.itmo.lab4.SalesAnalyzer <input path> <output path> <REDUCER_COUNT> <DATABLOCK_SIZE_KB>");
             System.exit(-1);
         }
 
