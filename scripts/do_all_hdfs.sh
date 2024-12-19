@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 
-cd ./tmp || exit 1
+if ! [[ "$PWD" = tmp ]]
+then
+  cd /tmp || exit 1
+fi
 
 ./setup_hdfs.sh
 ./load_data_hdfs.sh
