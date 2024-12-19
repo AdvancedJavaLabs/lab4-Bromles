@@ -29,6 +29,7 @@ public class SalesAnalyzer {
         int exitCode = ToolRunner.run(configuration, new AnalysisJob(), analysisArgs);
 
         if (exitCode != 0) {
+            System.out.println("Analysis job failed");
             System.exit(1);
         }
 
