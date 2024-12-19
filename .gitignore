@@ -1,0 +1,7 @@
+/.gradle
+/.idea
+/.vscode
+/build
+/bin
+/data/*.csv
+/result.txt
